@@ -1,0 +1,30 @@
+{
+  "presets": [
+    "es2015",
+    "es2016",
+    "react",
+    "stage-2"
+  ],
+  "plugins": [
+    "add-module-exports",
+    "react-hot-loader/babel",
+    [
+      "import", [
+        {
+          "libraryName": "antd",
+          "style": true
+        }
+      ]
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+      ]
+    },
+    "production": {
+      "plugins": [
+      ]
+    }
+  }
+}
