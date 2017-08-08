@@ -52,7 +52,12 @@ const notFound = status => (
 const routes = [
   '/',
   '/*',
-  '/antd',
+  'mural',
+  'mural/*',
+  'exhibition',
+  'exhibition/*',
+  'about',
+  'copy',
   '/example',
   '/example/*',
 ];

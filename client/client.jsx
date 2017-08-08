@@ -9,6 +9,8 @@ import { AppContainer } from 'react-hot-loader';
 import rootReducer from './reducers';
 import App from './app';
 
+import './scss/client';
+
 const middleware = [thunk];
 const store = createStore(
   rootReducer,

@@ -1,0 +1,42 @@
+@import "./../../scss/_base.scss";
+
+.box {
+  position: absolute;
+  top: uc(12);
+  left: uc(40);
+}
+.btn {
+  width: uc(50);
+  height: uc(37);
+
+  background: url(./images/menu.png) no-repeat top center;
+  background-size: uc(50) uc(37);
+}
+.nav {
+  display: none;
+  position: absolute;
+  top: uc(67);
+  left: uc(-40);
+  width: uc(750);
+
+  padding: 0 0 uc(50);
+
+  background: #f1ece7;
+
+  a {
+    display: block;
+    margin: uc(50) 0 0;
+
+    color: #1a1a1a;
+    font-size: uc(32);
+    line-height: uc(45);
+    text-align: center;
+    text-decoration: none;
+  }
+}
+[data-dpr="2"] .btn {
+  background: url(./images/menu@2x.png) no-repeat top center;
+}
+[data-dpr="3"] .logo {
+  background: url(./images/menu@3x.png) no-repeat top center;
+}

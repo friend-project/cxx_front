@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/loseyear/Isomorphic_lts#readme",
   "dependencies": {
-    "antd": "^2.12.3",
     "babel": "^6.23.0",
     "babel-plugin-system-import-transformer": "^3.1.0",
     "babel-preset-es2016": "^6.24.1",

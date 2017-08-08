@@ -1,0 +1,15 @@
+@import "./../../scss/_base.scss";
+
+.box {
+  min-height: uc(710);
+
+  background: red;
+}
+
+[data-dpr="2"] .btn {
+  background: url(./images/filter@2x.png) no-repeat top center;
+
+}
+[data-dpr="3"] .logo {
+  background: url(./images/filter@3x.png) no-repeat top center;
+}

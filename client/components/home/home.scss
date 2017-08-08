@@ -1,0 +1,57 @@
+@import "./../../scss/_base.scss";
+
+.stat {
+  margin: uc(45) 0 uc(52);
+  width: uc(750);
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width: uc(240);
+
+    text-align: center;
+    &:nth-child(1) {
+      border: 1px solid #352e2c;
+      border-width: 0 1px 0 0;
+    }
+    &:nth-child(2) {
+      border: 1px solid #352e2c;
+      border-width: 0 1px 0 0;
+    }
+  }
+  em {
+    display: block;
+
+    font-size: uc(40);
+    font-style: normal;
+    line-height: uc(56);
+  }
+  span {
+    display: block;
+    font-size: uc(20);
+    line-height: uc(30);
+  }
+}
+
+.more {
+  display: block;
+  margin: 0 auto uc(48);
+  width: uc(400);
+  height: uc(60);
+
+  color: #fff;
+  font-size: uc(28);
+  line-height: uc(60);
+  text-align: center;
+  text-decoration: none;
+
+  background: #1a1a1a;
+}
+
+.entry {
+  margin: 0 auto uc(20);
+  width: uc(690);
+  min-height: uc(300);
+
+  background: red;
+}
