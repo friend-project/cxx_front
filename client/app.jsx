@@ -13,12 +13,19 @@ import Copy from './components/copy';
 const App = () => (
   <div>
     <Route path="/" exact component={Home} />
+    {/* 壁画 */}
     <Route path="/mural" exact component={Mural} />
-    <Route path="/muralDetail" exact component={MuralDetail} />
+    {/* 壁画详情 */}
+    <Route path="/mural/:id" exact component={MuralDetail} />
+    {/* 展览 */}
     <Route path="/exhibition" exact component={Exhibition} />
-    <Route path="/exhibitionDetail" exact component={ExhibitionDetail} />
+    {/* 展览详情 */}
+    <Route path="/exhibition/:id" exact component={ExhibitionDetail} />
+    {/* 版权声明 */}
     <Route path="/copy" exact component={Copy} />
+    {/* 关于我们 */}
     <Route path="/about" exact component={About} />
+    {/* 例子 */}
     <Route path="/example" component={Example} />
   </div>
 );

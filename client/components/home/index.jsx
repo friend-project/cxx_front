@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import classnames from 'classnames';
 
 import Head from './../head';
 import Banner from './../banner';
@@ -32,8 +33,18 @@ class Home extends Component {
           </li>
         </ul>
         <Link to="" className={s.more}>点击查看更多</Link>
-        <div className={s.entry} />
-        <div className={s.entry} />
+        <div
+          className={classnames(s.entry, s.exhibition)}
+        >
+          <em>山西展览</em>
+          <span>零距离的将壁画艺术展现给公众</span>
+        </div>
+        <div
+          className={classnames(s.entry, s.about)}
+        >
+          <em>关于我们</em>
+          <span>不为梦想 只为传承</span>
+        </div>
       </div>
     );
   }

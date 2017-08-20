@@ -13,7 +13,12 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className={s.box}>
+      <div
+        className={s.box}
+        style={{
+          display: 'none',
+        }}
+      >
         <div className={s.btn} />
       </div>
     );

@@ -53,5 +53,39 @@
   width: uc(690);
   min-height: uc(300);
 
-  background: red;
+  text-align: center;
+
+  background: url(./images/about.png) no-repeat top center;
+  background-size: 100% 100%;
+
+  em {
+    display: block;
+    padding: uc(95) 0 0;
+
+    color: #fff;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+  }
+  span {
+    display: block;
+    padding: uc(20) 0 0;
+
+    color: #fff;
+    font-size: 12px;
+  }
+}
+.exhibition {
+  background: url(./images/exhibition.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+[data-dpr="2"] .entry {
+  em {
+    font-size: 50px;
+  }
+}
+[data-dpr="3"] .entry {
+  em {
+    font-size: 75px;
+  }
 }

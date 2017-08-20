@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import Head from './../head';
 import { post } from './action';
-
-import s from './banner';
+import s from './muralDetail';
 
 class Banner extends Component {
   shouldComponentUpdate(nextProps) {
@@ -14,7 +14,8 @@ class Banner extends Component {
   render() {
     return (
       <div className={s.box}>
-        banner
+        <Head />
+        todo...
       </div>
     );
   }
