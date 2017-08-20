@@ -7,11 +7,31 @@
   z-index: 11;
 }
 .btn {
-  width: uc(50);
+  width: 25px;
   height: uc(37);
 
-  background: url(./images/menu.png) no-repeat top center;
-  background-size: uc(50) uc(37);
+  position: relative;
+
+  &.active {
+    color: #fff;
+  }
+  span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    font-size: 0;
+    height: 1px;
+    background: #000;
+
+    &.middle {
+      top: 10px;
+    }
+    &.bottom {
+      top: 20px;
+    }
+  }
 }
 .nav {
   display: none;

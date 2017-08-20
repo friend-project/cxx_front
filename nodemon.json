@@ -19,7 +19,7 @@
   ],
   "env": {
     "NODE_ENV": "development",
-    "PORT": "9527"
+    "PORT": "9520"
   },
   "ext": "js jsx json css scss",
   "legacy-watch": false

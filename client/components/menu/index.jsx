@@ -29,12 +29,59 @@ class Menu extends Component {
   }
   render() {
     const { menu } = this.state;
+    let sTop = {};
+    let sMid = {};
+    let sBot = {};
+    if (menu === 'none') {
+      sTop = {
+        'transform-style': 'preserve-3d',
+        transition: 'transform 250ms',
+        transform: 'rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px)',
+      }
+      sMid = {
+        transition: 'width 250ms',
+        width: '25px',
+      }
+      sBot = {
+        'transform-style': 'preserve-3d',
+        transition: 'transform 250ms',
+        transform: 'rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px)',
+      }
+    } else {
+      sTop = {
+        'transform-style': 'preserve-3d',
+        transition: 'transform 250ms',
+        transform: 'rotateX(0deg) rotateY(0deg) rotateZ(45deg) translateX(7.0px) translateY(7.0px) translateZ(0px)',
+      }
+      sMid = {
+        transition: 'width 250ms',
+        width: '0px',
+      }
+      sBot = {
+        'transform-style': 'preserve-3d',
+        transition: 'transform 250ms',
+        transform: 'rotateX(0deg) rotateY(0deg) rotateZ(-45deg) translateX(7.0px) translateY(-7.0px) translateZ(0px)',
+      }
+    }
     return (
       <div className={s.box}>
         <div
           className={s.btn}
           onClick={() => this._toggleMenu()}
-        />
+        >
+          <span
+            className={s.top}
+            style={sTop}
+          />
+          <span
+            className={s.middle}
+            style={sMid}
+          />
+          <span
+            className={s.bottom}
+            style={sBot}
+          />
+        </div>
         <div
           className={s.nav}
           style={{
