@@ -25,7 +25,18 @@ export const failure = (n, error) => ({
 
 export const getMural = n => (dispatch) => {
   dispatch(request(n));
-  return fetch(`${cfg.api}/api/muralList`)
+  return fetch(
+    `${cfg.api}/api/muralList`,
+      {
+        method: 'GET',
+        mode: 'cors',
+        headers: new Headers({
+          'Access-Control-Allow-Credentials': true,
+        }),
+        cache: 'default',
+        body: JSON.stringify(n),
+      },
+    )
     .then(response => {
       if (response.status > 200) {
         dispatch(failure(n, response.status));
