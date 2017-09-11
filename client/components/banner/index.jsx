@@ -14,7 +14,7 @@ class Banner extends Component {
   render() {
     return (
       <div className={s.box}>
-        banner
+        <img src="http://admin.cxx.loseyear.com/uploads/img/banner1.jpg" />
       </div>
     );
   }

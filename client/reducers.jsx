@@ -2,10 +2,13 @@ import { combineReducers } from 'redux';
 
 import count from './components/count/reducer';
 import async from './components/async/reducer';
+import mural from './components/mural/reducer';
 
 const rootReducer = combineReducers({
-    count,
-    async,
+  mural,
+  count,
+  async,
 });
 
 export default rootReducer;
+

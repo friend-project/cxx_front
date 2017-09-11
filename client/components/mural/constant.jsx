@@ -1,5 +1,5 @@
 // async
-export const ASYNC_REQUEST = 'ASYNC_REQUEST';
-export const ASYNC_RECEIVE = 'ASYNC_RECEIVE';
-export const ASYNC_FAILURE = 'ASYNC_FAILURE';
+export const MURAL_REQUEST = 'MURAL_REQUEST';
+export const MURAL_RECEIVE = 'MURAL_RECEIVE';
+export const MURAL_FAILURE = 'MURAL_FAILURE';
 
