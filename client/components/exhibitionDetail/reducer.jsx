@@ -1,28 +1,28 @@
 import {
-    ASYNC_REQUEST,
-    ASYNC_RECEIVE,
-    ASYNC_FAILURE,
+    EXHIBITION_DETAIL_REQUEST,
+    EXHIBITION_DETAIL_RECEIVE,
+    EXHIBITION_DETAIL_FAILURE,
 } from './constant';
 
 export default (state = {
     isFetching: false,
-    response: {},
+    response: [],
     error: null,
 }, action) => {
     switch (action.type) {
-        case ASYNC_REQUEST:
+        case EXHIBITION_DETAIL_REQUEST:
             return {
                 ...state,
                 error: null,
                 isFetching: true,
             };
-        case ASYNC_RECEIVE:
+        case EXHIBITION_DETAIL_RECEIVE:
             return {
                 ...state,
                 isFetching: false,
                 response: action.response,
             };
-        case ASYNC_FAILURE:
+        case EXHIBITION_DETAIL_FAILURE:
             return {
                 ...state,
                 isFetching: false,
