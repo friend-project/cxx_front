@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import cfg from '../../../config/domain';
+console.log(cfg);
 import {
   MURAL_REQUEST,
   MURAL_RECEIVE,
@@ -24,9 +25,10 @@ export const failure = (n, error) => ({
 });
 
 export const getMural = n => (dispatch) => {
+  console.log(`${cfg.web}/api/muralList`);
   dispatch(request(n));
   return fetch(
-    `${cfg.api}/api/muralList`,
+    `${cfg.web}/api/muralList`,
       {
         method: 'GET',
         mode: 'cors',

@@ -25,7 +25,7 @@ export const failure = (n, error) => ({
 
 export const getDetail = n => (dispatch) => {
     dispatch(request(n));
-    return fetch(`${cfg.api}/api/exhibitionDetail/${n.id}`)
+    return fetch(`${cfg.web}/api/exhibitionDetail/${n.id}`)
         .then(response => {
             if (response.status > 200) {
                 dispatch(failure(n, response.status));

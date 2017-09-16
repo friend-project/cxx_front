@@ -1,16 +1,12 @@
 import Router from 'koa-router';
-import Weather from './../controllers/Weather';
+import Cxx from './../controllers/Cxx';
 
 const router = new Router({
     prefix: '/api'
 });
 
-/*
- * @brief 测试数据
- * params  id
- * @return json
- */
-router.get('/weather/:id', Weather.test);
-
+router.get('/muralList', Cxx.muralList);
+router.get('/exhibitionList', Cxx.exhibitionList);
+router.get('/exhibitionDetail/:id', Cxx.exhibitionDetail);
 export default router;
 

@@ -8,10 +8,7 @@ import Head from './../head';
 import { getMural } from './action';
 import s from './mural';
 
-class Banner extends Component {
-  shouldComponentUpdate(nextProps) {
-    return true;
-  }
+class Mural extends Component {
   componentWillMount() {
     const { dispatch } = this.props;
     dispatch(getMural());
@@ -28,7 +25,6 @@ class Banner extends Component {
                 return (
                   <li key={v.id}>
                     <a
-                      // href={`${match.url}/${v.id}`}
                       href={`${cfg.img}${v.img}`}
                       target="_blank"
                     >
@@ -47,7 +43,7 @@ class Banner extends Component {
     );
   }
 }
-Banner.propTypes = {
+Mural.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
@@ -58,5 +54,5 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Banner);
+export default connect(mapStateToProps)(Mural);
 
