@@ -5,7 +5,7 @@ const CxxModel = {};
 CxxModel.muralList = async (ctx, next, opt) => {
   try {
     const data = await new Promise(function(resolve) {
-      fetch('http://admin.cxx.loseyear.com/api/muralList')
+      fetch('http://admin.guwenming.org/api/muralList')
         .then((response) => {
           if (response.status >= 400) {
             ctx.logger.error('net work fail');
@@ -28,7 +28,7 @@ CxxModel.muralList = async (ctx, next, opt) => {
 CxxModel.exhibitionList = async (ctx, next) => {
   try {
     const data = await new Promise(function(resolve) {
-      fetch('http://admin.cxx.loseyear.com/api/exhibitionList')
+      fetch('http://admin.guwenming.org/api/exhibitionList')
         .then((response) => {
           if (response.status >= 400) {
             ctx.logger.error('net work fail');
@@ -51,7 +51,7 @@ CxxModel.exhibitionList = async (ctx, next) => {
 CxxModel.exhibitionDetail = async (ctx, next, opt) => {
   try {
     const data = await new Promise(function(resolve) {
-      fetch(`http://admin.cxx.loseyear.com/api/exhibitionDetail/${opt.id}`)
+      fetch(`http://admin.guwenming.org/api/exhibitionDetail/${opt.id}`)
         .then((response) => {
           if (response.status >= 400) {
             ctx.logger.error('net work fail');

@@ -30,7 +30,6 @@ export const post = n => (dispatch) => {
             if (response.status > 200) {
                 dispatch(failure(n, response.status));
             }
-            console.log(response);
             return response.json();
         })
         .then(stories => dispatch(receive(n, stories)));

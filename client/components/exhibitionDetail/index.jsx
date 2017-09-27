@@ -19,9 +19,6 @@ class ExhibitionDetail extends Component {
   }
   render() {
     const { exhibition } = this.props;
-    if(exhibition.response[0]) {
-      console.log(exhibition.response[0]);
-    }
     return (
       <div className={s.box}>
         <Head />

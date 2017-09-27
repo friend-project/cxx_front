@@ -34,7 +34,7 @@ class Menu extends Component {
     let sBot = {};
     if (menu === 'none') {
       sTop = {
-        'transform-style': 'preserve-3d',
+        'transformStyle': 'preserve-3d',
         transition: 'transform 250ms',
         transform: 'rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px)',
       }
@@ -43,13 +43,13 @@ class Menu extends Component {
         width: '25px',
       }
       sBot = {
-        'transform-style': 'preserve-3d',
+        'transformStyle': 'preserve-3d',
         transition: 'transform 250ms',
         transform: 'rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px)',
       }
     } else {
       sTop = {
-        'transform-style': 'preserve-3d',
+        'transformStyle': 'preserve-3d',
         transition: 'transform 250ms',
         transform: 'rotateX(0deg) rotateY(0deg) rotateZ(45deg) translateX(7.0px) translateY(7.0px) translateZ(0px)',
       }
@@ -58,7 +58,7 @@ class Menu extends Component {
         width: '0px',
       }
       sBot = {
-        'transform-style': 'preserve-3d',
+        'transformStyle': 'preserve-3d',
         transition: 'transform 250ms',
         transform: 'rotateX(0deg) rotateY(0deg) rotateZ(-45deg) translateX(7.0px) translateY(-7.0px) translateZ(0px)',
       }
