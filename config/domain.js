@@ -6,10 +6,10 @@ if (process.env.NODE_ENV === 'development') {
   domain.img = 'http://0.0.0.0:9522/map/';
   domain.api = 'http://0.0.0.0:9522';
 } else {
-  domain.web = 'http://mobile.cxx.loseyear.com';
-  domain.static = 'http://mobile.cxx.loseyear.com';
-  domain.img = 'http://admin.cxx.loseyear.com/map/';
-  domain.api = 'http://admin.cxx.loseyear.com';
+  domain.web = 'http://m.guwenming.org';
+  domain.static = 'http://m.guwenming.org';
+  domain.img = 'http://admin.guwenming.org/map/';
+  domain.api = 'http://admin.guwenming.org';
 }
 
 export default domain;
