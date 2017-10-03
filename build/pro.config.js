@@ -26,10 +26,10 @@ module.exports = {
       },
       {
         test: /\.(less|css)$/,
-        loader: ExtractTextPlugin.extract({
-          use: ['style-loader', 'css-loader', 'less-loader'],
-        }),
-        include: path.resolve(__dirname, 'node_modules'),
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'less-loader'],
+          fallback: 'style-loader',
+        })
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
