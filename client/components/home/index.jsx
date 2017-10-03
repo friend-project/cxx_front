@@ -13,6 +13,10 @@ class Home extends Component {
   shouldComponentUpdate(nextProps) {
     return true;
   }
+  _jump(type) {
+    const { history } = this.props
+    history.push(`/${type}`);
+  }
   render() {
     return (
       <div>
@@ -28,19 +32,21 @@ class Home extends Component {
             <span>平米壁画拍摄</span>
           </li>
           <li>
-            <em>5000</em>
+            <em>7000</em>
             <span>尊彩塑拍摄</span>
           </li>
         </ul>
-        <Link to="" className={s.more}>点击查看更多</Link>
+        <Link to="/mural" className={s.more}>点击查看更多</Link>
         <div
           className={classnames(s.entry, s.exhibition)}
+          onClick={() => this._jump('mural')}
         >
           <em>山西展览</em>
           <span>零距离的将壁画艺术展现给公众</span>
         </div>
         <div
           className={classnames(s.entry, s.about)}
+          onClick={() => this._jump('about')}
         >
           <em>关于我们</em>
           <span>不为梦想 只为传承</span>

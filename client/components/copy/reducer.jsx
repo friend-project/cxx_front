@@ -1,28 +1,28 @@
 import {
-    ASYNC_REQUEST,
-    ASYNC_RECEIVE,
-    ASYNC_FAILURE,
+    COPY_REQUEST,
+    COPY_RECEIVE,
+    COPY_FAILURE,
 } from './constant';
 
 export default (state = {
     isFetching: false,
-    response: {},
+    response: [],
     error: null,
 }, action) => {
     switch (action.type) {
-        case ASYNC_REQUEST:
+        case COPY_REQUEST:
             return {
                 ...state,
                 error: null,
                 isFetching: true,
             };
-        case ASYNC_RECEIVE:
+        case COPY_RECEIVE:
             return {
                 ...state,
                 isFetching: false,
                 response: action.response,
             };
-        case ASYNC_FAILURE:
+        case COPY_FAILURE:
             return {
                 ...state,
                 isFetching: false,

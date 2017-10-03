@@ -2,19 +2,32 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Slider from './components/slider.jsx';
 
 import { post } from './action';
 
 import s from './banner';
 
 class Banner extends Component {
-  shouldComponentUpdate(nextProps) {
-    return true;
+  constructor(props) {
+    super(props);
+    this.state = {
+      car: null,
+    };
   }
   render() {
+    var slides = [
+      {
+        background: "http://admin.guwenming.org/map/240b02eaa7c61.b",
+        link: "#"
+      }, {
+        background: "http://admin.guwenming.org/map/5001554c404ed.png",
+        link: "#"
+      }
+    ];
     return (
       <div className={s.box}>
-        <img src="http://admin.cxx.loseyear.com/uploads/img/banner1.jpg" />
+        <Slider slides={slides} time="2000" />
       </div>
     );
   }

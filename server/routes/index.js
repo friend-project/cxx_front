@@ -8,5 +8,7 @@ const router = new Router({
 router.get('/muralList', Cxx.muralList);
 router.get('/exhibitionList', Cxx.exhibitionList);
 router.get('/exhibitionDetail/:id', Cxx.exhibitionDetail);
+router.get('/generalDetail/:id', Cxx.generalDetail);
+
 export default router;
 

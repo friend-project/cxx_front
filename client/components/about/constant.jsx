@@ -1,5 +1,5 @@
 // async
-export const ASYNC_REQUEST = 'ASYNC_REQUEST';
-export const ASYNC_RECEIVE = 'ASYNC_RECEIVE';
-export const ASYNC_FAILURE = 'ASYNC_FAILURE';
+export const ABOUT_REQUEST = 'ABOUT_REQUEST';
+export const ABOUT_RECEIVE = 'ABOUT_RECEIVE';
+export const ABOUT_FAILURE = 'ABOUT_FAILURE';
 

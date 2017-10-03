@@ -1,30 +1,31 @@
 import 'isomorphic-fetch';
 import {
-    ASYNC_REQUEST,
-    ASYNC_RECEIVE,
-    ASYNC_FAILURE,
+    ABOUT_REQUEST,
+    ABOUT_RECEIVE,
+    ABOUT_FAILURE,
 } from './constant';
+import cfg from './../../../config/domain';
 
 export const request = n => ({
-    type: ASYNC_REQUEST,
+    type: ABOUT_REQUEST,
     amount: n
 });
 
 export const receive = (n, stories) => ({
-    type: ASYNC_RECEIVE,
+    type: ABOUT_RECEIVE,
     amount: n,
     response: stories
 });
 
 export const failure = (n, error) => ({
-    type: ASYNC_FAILURE,
+    type: ABOUT_FAILURE,
     amount: n,
     error: error
 });
 
-export const post = n => (dispatch) => {
+export const getAbout = n => (dispatch) => {
     dispatch(request(n));
-    return fetch(`http://0.0.0.0:9527/api/weather/${n}`)
+    return fetch(`${cfg.web}/api/generalDetail/${n}`)
         .then(response => {
             if (response.status > 200) {
                 dispatch(failure(n, response.status));
@@ -33,3 +34,4 @@ export const post = n => (dispatch) => {
         })
         .then(stories => dispatch(receive(n, stories)));
 };
+

@@ -2,7 +2,6 @@ import CxxModel from './../models/CxxModel';
 
 const Cxx = {};
 
-// 模拟数据
 Cxx.muralList = async (ctx, next) => {
     try {
         ctx.body = await CxxModel.muralList(ctx, next);
@@ -29,5 +28,17 @@ Cxx.exhibitionDetail = async (ctx, next) => {
         ctx.logger.error(new Error(e));
     }
 };
+
+Cxx.generalDetail = async (ctx, next) => {
+    try {
+        const opt = {
+            id: ctx.params.id,
+        };
+        ctx.body = await CxxModel.generalDetail(ctx, next, opt);
+    } catch (e) {
+        ctx.logger.error(new Error(e));
+    }
+};
+
 export default Cxx;
 

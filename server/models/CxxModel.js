@@ -1,11 +1,12 @@
 import 'isomorphic-fetch';
+import cfg from './../../config/domain';
 
 const CxxModel = {};
 
 CxxModel.muralList = async (ctx, next, opt) => {
   try {
     const data = await new Promise(function(resolve) {
-      fetch('http://admin.guwenming.org/api/muralList')
+      fetch(`${cfg.api}/api/muralList`)
         .then((response) => {
           if (response.status >= 400) {
             ctx.logger.error('net work fail');
@@ -28,7 +29,7 @@ CxxModel.muralList = async (ctx, next, opt) => {
 CxxModel.exhibitionList = async (ctx, next) => {
   try {
     const data = await new Promise(function(resolve) {
-      fetch('http://admin.guwenming.org/api/exhibitionList')
+      fetch(`${cfg.api}/api/exhibitionList`)
         .then((response) => {
           if (response.status >= 400) {
             ctx.logger.error('net work fail');
@@ -51,7 +52,7 @@ CxxModel.exhibitionList = async (ctx, next) => {
 CxxModel.exhibitionDetail = async (ctx, next, opt) => {
   try {
     const data = await new Promise(function(resolve) {
-      fetch(`http://admin.guwenming.org/api/exhibitionDetail/${opt.id}`)
+      fetch(`${cfg.api}/api/exhibitionDetail/${opt.id}`)
         .then((response) => {
           if (response.status >= 400) {
             ctx.logger.error('net work fail');
@@ -70,5 +71,29 @@ CxxModel.exhibitionDetail = async (ctx, next, opt) => {
 
   await next();
 };
+
+CxxModel.generalDetail = async (ctx, next, opt) => {
+  try {
+    const data = await new Promise(function(resolve) {
+      fetch(`${cfg.api}/api/generalDetail/${opt.id}`)
+        .then((response) => {
+          if (response.status >= 400) {
+            ctx.logger.error('net work fail');
+          }
+          return response.json();
+        })
+        .then((stories) => {
+          resolve(stories);
+        });
+    });
+
+    return data;
+  } catch(e) {
+    ctx.logger.error(e);
+  }
+
+  await next();
+};
+
 export default CxxModel;
 
