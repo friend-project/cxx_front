@@ -15,7 +15,6 @@ class Mural extends Component {
   }
   render() {
     const { mural, match } = this.props;
-    console.log(mural);
     return (
       <div className={s.box}>
         <Head />
@@ -56,4 +55,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Mural);
-

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Slider from './components/slider.jsx';
-
-import { post } from './action';
+import cfg from './../../../config/domain';
+import { getBanner } from './action';
 
 import s from './banner';
 
@@ -15,16 +15,18 @@ class Banner extends Component {
       car: null,
     };
   }
+  componentWillMount() {
+    const { dispatch } = this.props;
+    dispatch(getBanner());
+  }
   render() {
-    var slides = [
-      {
-        background: "http://admin.guwenming.org/map/240b02eaa7c61.b",
-        link: "#"
-      }, {
-        background: "http://admin.guwenming.org/map/5001554c404ed.png",
-        link: "#"
+    const { response } = this.props;
+    const slides = response.map((d) => {
+      return {
+        background: `${cfg.img}${d.img}`,
+        link: d.uri || '#',
       }
-    ];
+    });
     return (
       <div className={s.box}>
         <Slider slides={slides} time="2000" />
@@ -37,8 +39,10 @@ Banner.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  return {};
+  const { response } = state.banner;
+  return {
+    response,
+  };
 };
 
 export default connect(mapStateToProps)(Banner);
-

@@ -2,6 +2,14 @@ import CxxModel from './../models/CxxModel';
 
 const Cxx = {};
 
+Cxx.bannerList = async (ctx, next) => {
+    try {
+        ctx.body = await CxxModel.bannerList(ctx, next);
+    } catch (e) {
+        ctx.logger.error(new Error(e));
+    }
+};
+
 Cxx.muralList = async (ctx, next) => {
     try {
         ctx.body = await CxxModel.muralList(ctx, next);
@@ -41,4 +49,3 @@ Cxx.generalDetail = async (ctx, next) => {
 };
 
 export default Cxx;
-

@@ -1,30 +1,31 @@
 import 'isomorphic-fetch';
 import {
-    ASYNC_REQUEST,
-    ASYNC_RECEIVE,
-    ASYNC_FAILURE,
+    BANNER_REQUEST,
+    BANNER_RECEIVE,
+    BANNER_FAILURE,
 } from './constant';
+import cfg from './../../../config/domain';
 
 export const request = n => ({
-    type: ASYNC_REQUEST,
+    type: BANNER_REQUEST,
     amount: n
 });
 
 export const receive = (n, stories) => ({
-    type: ASYNC_RECEIVE,
+    type: BANNER_RECEIVE,
     amount: n,
     response: stories
 });
 
 export const failure = (n, error) => ({
-    type: ASYNC_FAILURE,
+    type: BANNER_FAILURE,
     amount: n,
     error: error
 });
 
-export const post = n => (dispatch) => {
+export const getBanner = n => (dispatch) => {
     dispatch(request(n));
-    return fetch(`http://0.0.0.0:9527/api/weather/${n}`)
+    return fetch(`${cfg.web}/api/bannerList`)
         .then(response => {
             if (response.status > 200) {
                 dispatch(failure(n, response.status));

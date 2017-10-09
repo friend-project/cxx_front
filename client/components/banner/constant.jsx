@@ -1,5 +1,4 @@
-// async
-export const ASYNC_REQUEST = 'ASYNC_REQUEST';
-export const ASYNC_RECEIVE = 'ASYNC_RECEIVE';
-export const ASYNC_FAILURE = 'ASYNC_FAILURE';
+export const BANNER_REQUEST = 'BANNER_REQUEST';
+export const BANNER_RECEIVE = 'BANNER_RECEIVE';
+export const BANNER_FAILURE = 'BANNER_FAILURE';
 

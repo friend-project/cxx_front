@@ -25,7 +25,6 @@ export const failure = (n, error) => ({
 
 export const getMural = n => (dispatch) => {
   dispatch(request(n));
-  console.log(`${cfg.web}/api/muralList`);
   return fetch(
     `${cfg.web}/api/muralList`,
       {
