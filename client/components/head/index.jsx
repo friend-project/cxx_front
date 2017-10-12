@@ -16,7 +16,9 @@ class Head extends Component {
     return (
       <div className={s.head}>
         <Menu />
-        <div className={s.logo} />
+        <div className={s.logo} >
+          <img src="http://admin.guwenming.org/map/9c2e9e36b6dd4.svg" />
+        </div>
         <Filter />
       </div>
     );

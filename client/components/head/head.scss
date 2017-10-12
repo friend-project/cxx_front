@@ -9,9 +9,13 @@
   margin: uc(1) auto 0;
   width: uc(246);
   height: uc(58);
-  background: blue;
-  background: url(./images/logo.png) no-repeat top center;
-  background-size: uc(246) uc(58);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  // background: blue;
+  // background: url(./images/logo.png) no-repeat top center;
+  // background-size: uc(246) uc(58);
 }
 [data-dpr="2"] .logo {
   background: url(./images/logo@2x.png) no-repeat top center;

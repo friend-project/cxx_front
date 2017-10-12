@@ -29,7 +29,7 @@ class Banner extends Component {
     });
     return (
       <div className={s.box}>
-        <Slider slides={slides} time="2000" />
+        <Slider slides={slides} time="5000" />
       </div>
     );
   }

@@ -40,12 +40,27 @@ export default class Slider extends React.Component{
     var slides = this.props.slides;
     var slide=slides.map(function(slide, index, array){
       return(
-        <Slide background={slide.background } active={index === _this.state.activeSlide} link={slide.link} key={index} change={_this.onChildChange} this={_this}/>
+        <Slide
+          background={slide.background}
+          active={index === _this.state.activeSlide}
+          link={slide.link}
+          key={index}
+          change={_this.onChildChange}
+          this={_this}
+        />
       )
     })
+    var point = slides.map((slide, index, array) => {
+      const active = index === _this.state.activeSlide;
+      const cla = active ? 'active' : null;
+      return(
+        <li className={cla}></li>
+      );
+    });
     return(
       <div className="slider">
-      {slide}
+        {slide}
+        <ul className="slider__active">{point}</ul>
         <div className="slider__next" onClick={ev=>{this.nextSlide()}}>
           <i className="fa fa-4x fa-arrow-circle-right"></i>
         </div>
@@ -56,6 +71,7 @@ export default class Slider extends React.Component{
     )
   }
 }
+
 class Slide extends React.Component{
   constructor(){
     super()
@@ -135,7 +151,13 @@ class Slide extends React.Component{
     };
     return(
       <a href={link}>
-        <div className="slider__slide" data-active={active} style={slideStyle} onTouchStart={ev=>{this.touchStart(ev)}} onTouchEnd ={ev=>{this.touchEnd(ev)}}>
+        <div
+          className="slider__slide"
+          data-active={active}
+          style={slideStyle}
+          onTouchStart={ev=>{this.touchStart(ev)}}
+          onTouchEnd ={ev=>{this.touchEnd(ev)}}
+        >
         </div>
       </a>
     )

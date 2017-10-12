@@ -39,8 +39,11 @@ class Menu extends Component {
         transform: 'rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px)',
       }
       sMid = {
-        transition: 'width 250ms',
-        width: '25px',
+        opacity: 1,
+// transition: 'transfrom 250ms, width 250ms',
+//        transition: 'transfrom 250ms',
+//        transform: 'translateX(0px)',
+//        width: '25px',
       }
       sBot = {
         'transformStyle': 'preserve-3d',
@@ -54,8 +57,10 @@ class Menu extends Component {
         transform: 'rotateX(0deg) rotateY(0deg) rotateZ(45deg) translateX(7.0px) translateY(7.0px) translateZ(0px)',
       }
       sMid = {
-        transition: 'width 250ms',
-        width: '0px',
+        opacity: 0,
+//        transition: 'transfrom 250ms',
+//        transform: 'translateX(12.5px)',
+// width: '0px',
       }
       sBot = {
         'transformStyle': 'preserve-3d',
@@ -92,7 +97,6 @@ class Menu extends Component {
           <Link to="/mural">壁画展示</Link>
           <Link to="/exhibition">我们的展览</Link>
           <Link to="/about">关于我们</Link>
-          <Link to="/copy">版权声明</Link>
         </div>
       </div>
     );

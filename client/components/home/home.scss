@@ -24,6 +24,7 @@
 
     font-size: uc(40);
     font-style: normal;
+    font-weight: bold;
     line-height: uc(56);
   }
   span {
@@ -45,11 +46,12 @@
   text-align: center;
   text-decoration: none;
 
+  border-radius: uc(6);
   background: #1a1a1a;
 }
 
 .entry {
-  margin: 0 auto uc(20);
+  margin: 0 auto uc(30);
   width: uc(690);
   min-height: uc(300);
 
@@ -76,6 +78,8 @@
   }
 }
 .exhibition {
+  margin: 0 auto uc(20);
+
   background: url(./images/exhibition.png) no-repeat top center;
   background-size: 100% 100%;
 }
