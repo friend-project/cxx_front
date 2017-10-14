@@ -11,6 +11,7 @@
   li {
     float: left;
     width: uc(335);
+    height: uc(310);
     margin: 0 0 uc(20);
 
     box-shadow: 0 2px 4px #ccc;
@@ -22,10 +23,10 @@
   }
   a {
     display: block;
-  }
-  img {
-    width: 100%;
-    height: uc(220);
+
+    width: uc(335);
+    height: uc(250);
+    background-size: cover;
   }
   h2 {
     height: uc(60);
