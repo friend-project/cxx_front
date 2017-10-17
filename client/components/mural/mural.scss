@@ -7,7 +7,10 @@
   width: 100%;
   ul {
     margin: 0 uc(30);
+    padding: 0 0 uc(10);
+    @extend %clearfix;
   }
+
   li {
     float: left;
     width: uc(335);
