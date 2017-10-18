@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Menu from './../menu';
@@ -17,7 +17,9 @@ class Head extends Component {
       <div className={s.head}>
         <Menu />
         <div className={s.logo} >
-          <img src="http://admin.guwenming.org/map/9c2e9e36b6dd4.svg" />
+          <Link to="/">
+            <img src="http://admin.guwenming.org/map/9c2e9e36b6dd4.svg" />
+          </Link>
         </div>
         <Filter />
       </div>
